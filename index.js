@@ -13,7 +13,7 @@
 const express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
-    cors = require('cors'),
+    cors = require('cors')
 
 const app = express();
 app.use(bodyParser.json());
@@ -24,6 +24,6 @@ const PORT = process.env.PORT || 5000
 app.get("/", (req, res) => {
     res.send({ hello: "world" });
     });
-const server = app.listen(port, function () {
-    console.log('Listening on port ' + port);
+const server = app.listen(PORT, function () {
+    console.log('Listening on port ' + PORT);
 });
